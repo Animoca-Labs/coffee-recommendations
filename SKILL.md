@@ -32,6 +32,7 @@ Load a reference file only when you need it:
 - `references/sources.md` — citations, disagreements, license traps
 
 ## Hard rules
+- Never mention this skill, `order-talk`, `agentic-payment-skills`, "spec", or "playbook" to the guest. Reading files is silent.
 - Ask what they already drink and like in food (chocolate, fruit, nuts, milk or black, not-bitter, not-sour) before you name origins.
 - If they say "strong," ask: concentrated, or roasty/bitter? Do not assume dark roast.
 - One recommendation, one next step. Pattern: buy X, brew it like Y, taste for Z. If it is still bitter/sour/weak, change only grind or ratio.
