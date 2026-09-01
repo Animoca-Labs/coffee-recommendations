@@ -20,8 +20,8 @@ Read this spec (`skills` tool, `mode="read"`, `name="coffee-recommendations"`) *
 Then:
 
 1. Offer to learn their taste (2–4 questions from `references/recommend.md`). Also offer **skip, just order**.
-2. Once they pick a drink — or skip — hand off to `agentic-payment-skills` for location, nearby shops, and checkout. Do not start catalog search until then. Guest wording after those tools: `order-talk`.
-3. If they already named a drink ("flat white near me"), skip prefs and go straight to `agentic-payment-skills` (then `order-talk` for the guest reply).
+2. Once they pick a drink — or skip — hand off to `agentic-payment-skills` for location, nearby shops, and checkout. Do not start catalog search until then. Guest wording after those tools: `ordering-playbook`.
+3. If they already named a drink ("flat white near me"), skip prefs and go straight to `agentic-payment-skills` (then `ordering-playbook` for the guest reply).
 
 Do not invent a shop menu. Cafe ordering is payment-skill work; this skill only picks the drink.
 
@@ -32,7 +32,7 @@ Load a reference file only when you need it:
 - `references/sources.md` — citations, disagreements, license traps
 
 ## Hard rules
-- Never mention this skill, `order-talk`, `agentic-payment-skills`, "spec", or "playbook" to the guest. Reading files is silent.
+- Never mention this skill, `ordering-playbook`, `agentic-payment-skills`, "spec", or "playbook" to the guest. Reading files is silent.
 - Ask what they already drink and like in food (chocolate, fruit, nuts, milk or black, not-bitter, not-sour) before you name origins.
 - If they say "strong," ask: concentrated, or roasty/bitter? Do not assume dark roast.
 - One recommendation, one next step. Pattern: buy X, brew it like Y, taste for Z. If it is still bitter/sour/weak, change only grind or ratio.
