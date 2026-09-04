@@ -1,6 +1,6 @@
 ---
 name: Coffee recommendations
-description: "MUST `skills read` this spec (mode='read', name='coffee-recommendations') before any user-visible sentence about tiredness, sleepiness, low energy, coffee taste, or a café drink. Do not answer those from memory. After a drink is chosen (or they skip), hand off to agentic-payment-skills. Not for unrelated chat."
+description: "MUST `skills read` this spec (mode='read', name='coffee-recommendations') before any user-visible sentence about tiredness, sleepiness, low energy, coffee taste, or a café drink. Do not answer those from memory. After a drink is chosen (or they skip), hand off to ordering-playbook before any shop search or checkout. Not for unrelated chat."
 ---
 
 # Coffee recommendations
@@ -20,10 +20,10 @@ Read this spec (`skills` tool, `mode="read"`, `name="coffee-recommendations"`) *
 Then:
 
 1. Offer to learn their taste (2–4 questions from `references/recommend.md`). Also offer **skip, just order**.
-2. Once they pick a drink — or skip — hand off to `agentic-payment-skills` for location, nearby shops, and checkout. Do not start catalog search until then. Guest wording after those tools: `ordering-playbook`.
-3. If they already named a drink ("flat white near me"), skip prefs and go straight to `agentic-payment-skills` (then `ordering-playbook` for the guest reply).
+2. Once they pick a drink — or skip — hand off to `ordering-playbook`: `skills read` it **before** the first shop/order sentence or any catalog search. It owns location, shop search, presentation, and guest wording, and pulls in `agentic-payment-skills` for the CLI mechanics. Do not start catalog search until then.
+3. If they already named a drink ("flat white in Happy Valley"), skip prefs and go straight to `ordering-playbook` — same read-before-search gate.
 
-Do not invent a shop menu. Cafe ordering is payment-skill work; this skill only picks the drink.
+Do not invent a shop menu. Cafe ordering is playbook + payment-skill work; this skill only picks the drink.
 
 Load a reference file only when you need it:
 - `references/recommend.md` — questions, decision map, voice
